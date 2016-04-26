@@ -1,0 +1,38 @@
+{
+  "name": "code-copter-analyzer-jscs",
+  "version": "1.0.0",
+  "description": "Analyzer plugin for code-copter v2 which uses JSCS.",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "rm -r coverage/ node_modules",
+    "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
+    "posttest": "istanbul check-coverage",
+    "watch:test": "nodemon -w src -x npm test"
+  },
+  "dependencies": {
+    "code-copter-sdk": "^1.1.0",
+    "jscs": "^3.0.3"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "jasmine": "^2.4.1",
+    "nodemon": "^1.9.1"
+  },
+  "author": "Joe Theriault <joseph@yankoismedia.com> (http://www.josephtheriault.com)",
+  "bugs": {
+    "url": "https://github.com/jtheriault/code-copter-analyzer-jscs/issues"
+  },
+  "homepage": "https://github.com/jtheriault/code-copter-analyzer-jscs#readme",
+  "keywords": [
+    "code-copter",
+    "jscs",
+    "style",
+    "guide",
+    "test"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/jtheriault/code-copter-analyzer-jscs.git"
+  }
+}
