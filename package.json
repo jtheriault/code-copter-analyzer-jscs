@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf coverage/ node_modules npm-shrinkwrap.json",
     "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'",
-    "prepublish": "in-publish && npm shrinkwrap || echo 'Skipping prepublish step'",
+    "prepublish": "(in-publish && npm shrinkwrap) || (! in-publish && echo 'Skipping prepublish step')",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
     "preversion": "npm test",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
