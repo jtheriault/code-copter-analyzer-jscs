@@ -4,9 +4,9 @@
   "description": "Analyzer plugin for code-copter v2 which uses JSCS.",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rm -r coverage/ node_modules",
+    "clean": "rm -rf coverage/ node_modules npm-shrinkwrap.json",
     "ls:todo": "egrep -nr '\\W+TODO\\W+.*$' src/ || echo 'Nothing to do.'",
-    "prepublish": "npm shrinkwrap",
+    "prepublish": "in-publish && npm shrinkwrap || echo 'Skipping prepublish step'",
     "preshrinkwrap": "rm -f npm-shrinkwrap.json",
     "preversion": "npm test",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover --handle-sigint jasmine",
@@ -19,6 +19,7 @@
     "jscs": "^3.0.3"
   },
   "devDependencies": {
+    "in-publish": "^2.0.0",
     "istanbul": "^0.4.3",
     "jasmine": "^2.4.1",
     "nodemon": "^1.9.1"
