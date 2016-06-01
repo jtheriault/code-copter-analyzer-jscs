@@ -1,6 +1,6 @@
 {
   "name": "code-copter-analyzer-jscs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Analyzer plugin for code-copter v2 which uses JSCS.",
   "main": "src/index.js",
   "scripts": {
