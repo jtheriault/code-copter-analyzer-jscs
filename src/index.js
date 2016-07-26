@@ -33,7 +33,7 @@ function analyze (fileSourceData) {
 
 function configure (config) {
     if (config === false) {
-        throw new Error('JSHint configuration has been disabled');
+        throw new Error('JSCS configuration has been disabled');
     }
     else if (config === true) {
         configuration = getJscsrc();
